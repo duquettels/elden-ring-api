@@ -57,7 +57,7 @@ public class CharacterService {
 
     //get all characters of a given type
     public List<Character> getCharactersByType(String type) {
-        return characterRepository.findByTypeIgnoreCase(type);
+        return characterRepository.findByTypeContainingIgnoreCase(type);
     }
 
     // get characters whose name contains a string
