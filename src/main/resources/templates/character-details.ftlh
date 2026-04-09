@@ -44,8 +44,12 @@
                     </div>
 
                     <div class="mt-4">
-                        <a href="/mvc/characters" class="btn btn-gold px-4 me-2">Back to Roster</a>
+                        <a href="/mvc/characters" class="btn btn-gold px-4 me-2">Back to Gallery</a>
                         <a href="/mvc/characters/update/${character.characterId?c}" class="btn btn-outline-warning px-4">Edit Character</a>
+                        <a href="/mvc/characters/delete/${character.characterId?c}" 
+                            class="btn btn-outline-danger px-4" 
+                            onclick="return confirm('Are you sure you want to banish ${character.name} from the Lands Between? This cannot be undone.');">
+                            Banish (Delete)
                     </div>
                 </div>
             </div>

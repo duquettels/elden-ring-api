@@ -23,7 +23,7 @@
     <main class="container">
         <div class="search-container mt-5 p-4" style="background-color: #1e1e1e; border: 1px solid #b8860b; border-radius: 15px;">
             <h1 class="text-center mb-4 text-warning">Add a New Legend</h1>
-            <p class="text-center text-muted mb-4">Enter the details of a new inhabitant of the Lands Between, Tarnished.</p>
+            <p class="text-center mb-4" style="color: #b0b0b0;" >Enter the details of a new inhabitant of the Lands Between, Tarnished.</p>
             
             <form action="/mvc/characters/new" method="POST">
                 
@@ -48,6 +48,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-gold py-2 w-100 mt-3">Summon Character into Database</button>
+                <a href="/mvc/characters" class="btn btn-outline-secondary py-2 w-100 mt-2">Back to Gallery</a>
             </form>
         </div>
     </main>
