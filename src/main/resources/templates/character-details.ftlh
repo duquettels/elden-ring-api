@@ -13,7 +13,7 @@
         <div class="container">
             <a class="navbar-brand font-weight-bold" href="/mvc/characters">ELDEN RING GALLERY</a>
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/mvc/characters">Home</a>
+                <a class="nav-link" href="/">Home</a>
                 <a class="nav-link" href="/mvc/characters/about">About</a>
                 <a class="nav-link" href="/mvc/characters/new">Add Character</a>
             </div>
