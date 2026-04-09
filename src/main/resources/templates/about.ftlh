@@ -24,13 +24,14 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="about-card">
-                    <img src="images/erdtree_landscape.png" alt="The Erdtree Landscape" class="about-img">
+                    <img src="/images/erdtree_landscape.png" alt="The Erdtree Landscape" class="about-img">
                     
-                    <h1 class="display-4 text-center mb-4">About This Gallery</h1>
+                    <h1 class="display-4 text-center mb-4">About This Application</h1>
                     
                     <section class="content fs-5">
                         <p>
-                            This static web application was designed and developed as a project for <span class="highlight">CSC340</span>. The primary goal was to practice building responsive, multi-page prototypes using HTML, CSS, and the Bootstrap framework.
+                            This is a dynamic, full-stack MVC web application developed for <span class="highlight">CSC340</span>. 
+                            It has evolved from a static HTML prototype into a fully functional data-driven system connected to a live database.
                         </p>
                         
                         <hr>
@@ -45,10 +46,10 @@
 
                         <h3>Technical Features</h3>
                         <ul>
-                            <li>Responsive Grid Layout using Bootstrap.</li>
-                            <li>Live Search functionality to filter character legends.</li>
-                            <li>Uniform image scaling with CSS <code>object-fit</code> properties.</li>
-                            <li>Consistent site-wide navigation and branding.</li>
+                            <li><strong>Backend:</strong> Built with Spring Boot and Java, featuring a RESTful CRUD API.</li>
+                            <li><strong>Database:</strong> Persistent data storage using Neon PostgreSQL.</li>
+                            <li><strong>Frontend:</strong> Server-Side Rendering utilizing FreeMarker templates (.ftlh).</li>
+                            <li><strong>Styling:</strong> Responsive design powered by the Bootstrap framework and custom CSS.</li>
                         </ul>
                     </section>
                 </div>
