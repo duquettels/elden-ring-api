@@ -28,8 +28,14 @@
                         <img src="/images/marika_full.jpg" class="hero-img" alt="${character.name}">
                     <#elseif character.name?contains("Malenia")>
                         <img src="/images/malenia_full.jpg" class="hero-img" alt="${character.name}">
+                    <#elseif character.name?contains("Radagon")>
+                        <img src="/images/radagon_full.jpg" class="custom-img" alt="${character.name}">
+                    <#elseif character.name?contains("Godfrey")>
+                        <img src="/images/godfrey_full.jpg" class="custom-img" alt="${character.name}">
+                    <#elseif character.name?contains("Ranni")>
+                        <img src="/images/ranni_full.jpg" class="custom-img" alt="${character.name}">
                     <#else>
-                        <img src="/images/erdtree_landscape.png" class="hero-img" alt="${character.name}">
+                        <img src="/images/erdtree_default.png" class="hero-img" alt="${character.name}">
                     </#if>
                 </div>
                 
