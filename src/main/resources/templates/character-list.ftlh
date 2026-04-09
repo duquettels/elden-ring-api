@@ -70,7 +70,12 @@
                         <#elseif character.name?contains("Malenia")>
                             <img src="/images/malenia.jpg" class="custom-img" alt="${character.name}">
                         <#elseif character.name?contains("Radagon")>
-                            
+                            <img src="/images/radagon.jpg" class="custom-img" alt="${character.name}">
+                        <#elseif character.name?contains("Godfrey")>
+                            <img src="/images/godfrey.jpg" class="custom-img" alt="${character.name}">
+                        <#elseif character.name?contains("Ranni")>
+                            <img src="/images/ranni.jpg" class="custom-img" alt="${character.name}">
+                        <#else>
                             <img src="/images/erdtree_default.png" class="custom-img" alt="${character.name}">
                         </#if>
                         <div class="card-body text-center">
