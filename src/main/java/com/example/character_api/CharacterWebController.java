@@ -14,6 +14,12 @@ public class CharacterWebController {
         this.characterService = characterService;
     }
 
+    // 0. HOMEPAGE REDIRECT
+    @GetMapping("/")
+    public String redirectToCharacterList() {
+        return "redirect:/mvc/characters";
+}
+
     // 1. GET ALL (character-list.ftlh)
     @GetMapping
     public String viewAllCharacters(Model model) {
@@ -86,7 +92,7 @@ public class CharacterWebController {
 
         // Tells the web page a filter is on, and what class they picked
         model.addAttribute("activeFilter", "Class: " + type);
-        
+
         return "character-list"; 
     }
 }
