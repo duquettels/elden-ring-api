@@ -25,33 +25,24 @@
             <h1 class="text-center mb-4">Add a New Legend</h1>
             <p class="text-center text-muted mb-4">Enter the details of a new inhabitant of the Lands Between.</p>
             
-            <form id="characterForm">
+            <form action="/mvc/characters/new" method="POST">
                 <div class="mb-3">
-                    <label for="charName" class="form-label">Character Name</label>
-                    <input type="text" class="form-control" id="charName" placeholder="e.g. Blaidd the Half-Wolf" required>
+                    <label class="form-label">Character Name</label>
+                    <input type="text" class="form-control" name="name" required>
                 </div>
-
                 <div class="mb-3">
-                    <label for="charUniverse" class="form-label">Universe</label>
-                    <input type="text" class="form-control" id="charUniverse" value="Elden Ring" required>
+                    <label class="form-label">Type</label>
+                    <input type="text" class="form-control" name="type" required>
                 </div>
-
                 <div class="mb-3">
-                    <label for="charRole" class="form-label">Role</label>
-                    <input type="text" class="form-control" id="charRole" placeholder="e.g. Shadow of Ranni" required>
+                    <label class="form-label">Affiliation</label>
+                    <input type="text" class="form-control" name="affiliation" required>
                 </div>
-
                 <div class="mb-3">
-                    <label for="charImg" class="form-label">Image URL</label>
-                    <input type="url" class="form-control" id="charImg" placeholder="https://example.com/image.jpg">
+                    <label class="form-label">Character Description</label>
+                    <textarea class="form-control" name="description" rows="4" required></textarea>
                 </div>
-
-                <div class="mb-3">
-                    <label for="charDesc" class="form-label">Character Description</label>
-                    <textarea class="form-control" id="charDesc" rows="4" placeholder="Briefly describe their history or significance..."></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-gold py-2">Submit Prototype</button>
+                <button type="submit" class="btn btn-gold py-2">Submit Character</button>
             </form>
             
             <div class="mt-4 text-center">
