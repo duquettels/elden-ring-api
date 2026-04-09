@@ -117,3 +117,31 @@ body {
     background-color: #f0e68c;
 }
 
+/* --- YOU DIED ERROR PAGE --- */
+.death-body {
+    background-color: #0a0a0a !important;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.death-container {
+    text-align: center;
+    animation: fadeInDeath 3s ease-in;
+}
+
+.death-text {
+    color: #8b0000; /* Dark Blood Red */
+    font-family: 'Times New Roman', serif;
+    font-size: 8rem;
+    font-weight: bold;
+    letter-spacing: 15px;
+    text-shadow: 0 0 20px rgba(139, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+@keyframes fadeInDeath {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
