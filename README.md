@@ -12,7 +12,7 @@ The project has evolved from a standalone JSON API into a dynamic, data-driven w
 3. Run the application from the root directory:
    `.\mvnw spring-boot:run`
 4. Open your web browser and navigate to the frontend gallery:
-   `http://localhost:8080/mvc/characters`
+   `http://localhost:8080/`
 
 ## Web Frontend Routes (MVC)
 
@@ -41,7 +41,7 @@ The original backend API is still fully functional for raw data access:
 
 ## Demo Video
 
-[Link to Demo Video on OneDrive] <https://uncg-my.sharepoint.com/:v:/g/personal/lsduquette_uncg_edu/IQB9P-AZR6g9Qp5E0jJiPFjrATz8jJsMGUuO7a-ihOWp8zk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=TnkD7l>
+[Link to Demo Video on OneDrive] <https://uncg-my.sharepoint.com/:v:/g/personal/lsduquette_uncg_edu/IQDJGWnuyQBWT411HOo9AzsSAWQCuHpaLQt_V1yroHNw4Vo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=SahY3U>
 
 ## Developer
 
