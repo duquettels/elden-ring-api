@@ -61,5 +61,11 @@ public class CharacterWebController {
         characterService.deleteCharacter(id);
         return "redirect:/mvc/characters";
     }
+
+    // 8. ABOUT PAGE
+    @GetMapping("/about")
+    public String showAboutPage() {
+        return "about"; 
+    }
 }
     
