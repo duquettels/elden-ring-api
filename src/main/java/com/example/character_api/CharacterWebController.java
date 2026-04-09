@@ -32,7 +32,18 @@ public class CharacterWebController {
     // 2. GET ONE (character-details.ftlh)
     @GetMapping("/{id}")
     public String viewCharacterDetails(@PathVariable Long id, Model model) {
-        model.addAttribute("character", characterService.getCharacterById(id));
+        // 1. Fetch the character first to see if they exist in the database
+        Character character = characterService.getCharacterById(id);
+
+        // 2. If the character is null (meaning the ID was invalid), show the error page
+        if (character == null) {
+            model.addAttribute("status", "404 - Lost Grace");
+            model.addAttribute("error", "The Legend you seek has been lost to the Fog. Perhaps they were never summoned?");
+            return "error"; // This returns your 'error.ftlh' template
+        }
+
+        // 3. If the character exists, proceed to the details page as normal
+        model.addAttribute("character", character);
         return "character-details";
     }
 
