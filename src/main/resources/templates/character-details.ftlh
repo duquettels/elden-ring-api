@@ -56,6 +56,7 @@
                             class="btn btn-outline-danger px-4" 
                             onclick="return confirm('Are you sure you want to banish ${character.name} from the Lands Between? This cannot be undone.');">
                             Banish (Delete)
+                        </a>
                     </div>
                 </div>
             </div>
