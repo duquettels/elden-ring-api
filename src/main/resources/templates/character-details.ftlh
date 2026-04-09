@@ -27,7 +27,7 @@
                     <#if character.name?contains("Marika")>
                         <img src="/images/marika_full.jpg" class="hero-img" alt="${character.name}">
                     <#else>
-                        <img src="/images/character_default.png" class="hero-img" alt="${character.name}">
+                        <img src="/images/character_default.jpg" class="hero-img" alt="${character.name}">
                     </#if>
                 </div>
                 
