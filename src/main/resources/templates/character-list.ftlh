@@ -38,7 +38,19 @@
             <#list characterList as character>
                 <div class="col char-item">
                     <div class="card h-100 character-card">
-                        <img src="../static/images/" class="custom-img" alt="">
+                        <#if character.name?contains("Marika")>
+                            <img src="/images/marika.jpg" class="custom-img" alt="${character.name}">
+                        <#elseif character.name?contains("Malenia")>
+                            <img src="/images/malenia.jpg" class="custom-img" alt="${character.name}">
+                        <#elseif character.name?contains("Radagon")>
+                            <img src="/images/radagon.jpg" class="custom-img" alt="${character.name}">
+                        <#elseif character.name?contains("Godfrey")>
+                            <img src="/images/godfrey.jpg" class="custom-img" alt="${character.name}">
+                        <#elseif character.name?contains("Ranni")>
+                            <img src="/images/ranni.jpg" class="custom-img" alt="${character.name}">
+                        <#else>
+                            <img src="/images/erdtree_landscape.png" class="custom-img" alt="${character.name}">
+                        </#if>
                         <div class="card-body text-center">
                             <h4 class="card-title text-warning">${character.name}</h4>
                             <p class="card-text text-light"><strong>Type: ${character.type}</strong> | <strong>Affiliation: ${character.affiliation}</strong></p>

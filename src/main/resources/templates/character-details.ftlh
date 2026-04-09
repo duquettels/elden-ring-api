@@ -24,7 +24,13 @@
         <div class="detail-container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="/images/erdtree_landscape.png" alt="Character Portrait" class="hero-img">
+                    <#if character.name?contains("Marika")>
+                        <img src="/images/marika_full.jpg" class="hero-img" alt="${character.name}">
+                    <#elseif character.name?contains("Malenia")>
+                        <img src="/images/malenia_full.jpg" class="hero-img" alt="${character.name}">
+                    <#else>
+                        <img src="/images/erdtree_landscape.png" class="hero-img" alt="${character.name}">
+                    </#if>
                 </div>
                 
                 <div class="col-lg-6">
