@@ -5,7 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller // this is @Controller, not @RestController, because we are returning view names, not JSON future me
+
 @RequestMapping("/mvc/characters") 
+
 public class CharacterWebController {
 
     private final CharacterService characterService;
@@ -96,4 +98,5 @@ public class CharacterWebController {
         return "character-list"; 
     }
 }
+
     
