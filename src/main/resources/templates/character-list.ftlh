@@ -76,7 +76,7 @@
                         <#elseif character.name?contains("Ranni")>
                             <img src="/images/ranni.jpg" class="custom-img" alt="${character.name}">
                         <#else>
-                            <img src="/images/erdtree_default.png" class="custom-img" alt="${character.name}">
+                            <img src="/images/erdtree_default.jpg" class="custom-img" alt="${character.name}">
                         </#if>
                         <div class="card-body text-center">
                             <h4 class="card-title text-warning">${character.name}</h4>
