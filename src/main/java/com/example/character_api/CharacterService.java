@@ -1,5 +1,6 @@
 package com.example.character_api;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -57,7 +58,27 @@ public class CharacterService {
 
     //get all characters of a given type
     public List<Character> getCharactersByType(String type) {
-        return characterRepository.findByTypeIgnoreCase(type);
+        // 1. Get ALL characters from the database
+        List<Character> allCharacters = characterRepository.findAll();
+        List<Character> filteredList = new ArrayList<>();
+
+        // 2. Loop through them and check for exact word matches
+        for (Character c : allCharacters) {
+            if (c.getType() != null) {
+                // Split the string by the comma and space (e.g. "Empyrean, God" becomes ["Empyrean", "God"])
+                String[] distinctClasses = c.getType().split(", "); 
+                
+                for (String singleClass : distinctClasses) {
+                    // Check if the exact standalone word matches what they searched for
+                    if (singleClass.equalsIgnoreCase(type)) {
+                        filteredList.add(c);
+                        break; // We found a match no other checks
+                    }
+                }
+            }
+        }
+        
+        return filteredList;
     }
 
     // get characters whose name contains a string

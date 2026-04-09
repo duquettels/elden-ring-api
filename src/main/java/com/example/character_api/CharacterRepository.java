@@ -10,5 +10,5 @@ public interface CharacterRepository extends JpaRepository<Character, Long> {
     List<Character> findByNameContainingIgnoreCase(String name);
 
     // Custom query method to find characters by type (e.g., demigod, empyrean)
-    List<Character> findByTypeIgnoreCase(String type);
+    List<Character> findByTypeContainingIgnoreCase(String type);
 }
