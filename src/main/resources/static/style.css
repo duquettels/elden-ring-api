@@ -92,6 +92,7 @@ body {
     background-color: #2d2d2d;
     border: 1px solid #b8860b;
     color: white;
+
 }
 
 .form-control:focus {
@@ -108,10 +109,11 @@ body {
 
 .btn-gold {
     background-color: #b8860b;
-    color: black;
+    color: black; 
     font-weight: bold;
 }
 
 .btn-gold:hover {
     background-color: #f0e68c;
 }
+
