@@ -67,5 +67,27 @@ public class CharacterWebController {
     public String showAboutPage() {
         return "about"; 
     }
+
+    // EXTRA CREDIT: Search by Name
+    @GetMapping("/search")
+    public String searchCharactersByName(@RequestParam String name, Model model) {
+        model.addAttribute("characterList", characterService.getCharactersByName(name));
+
+        // Tells the web page a filter is on, and what they searched for
+        model.addAttribute("activeFilter", "Name containing: '" + name + "'");
+
+        return "character-list"; // Reuses the gallery page, but with filtered data!
+    }
+
+    // EXTRA CREDIT: Filter by Type
+    @GetMapping("/type")
+    public String filterCharactersByType(@RequestParam String type, Model model) {
+        model.addAttribute("characterList", characterService.getCharactersByType(type));
+
+        // Tells the web page a filter is on, and what class they picked
+        model.addAttribute("activeFilter", "Class: " + type);
+        
+        return "character-list"; 
+    }
 }
     

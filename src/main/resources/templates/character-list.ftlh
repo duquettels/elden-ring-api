@@ -27,8 +27,35 @@
         <h1 class="display-4">Legends of the Lands Between</h1>
         <p class="lead">Gallery of Important Characters in Elden Ring</p>
         
-        <div class="search-container">
-            <input type="text" id="charSearch" class="form-control" placeholder="Search by name or role (e.g. Demigod)...">
+        <div class="search-container d-flex flex-column gap-3 mt-4">
+            
+            <form action="/mvc/characters/search" method="GET" class="d-flex">
+                <input type="text" name="name" class="form-control me-2" placeholder="Search by character name (e.g. Radahn)..." required>
+                <button type="submit" class="btn btn-gold">Search Name</button>
+            </form>
+
+            <form action="/mvc/characters/type" method="GET" class="d-flex">
+                <select name="type" class="form-control me-2" required>
+                    <option value="" disabled selected>Filter by Class / Type...</option>
+                    <option value="God">God</option>
+                    <option value="Demigod">Demigod</option>
+                    <option value="Empyrean">Empyrean</option>
+                    <option value="Warrior">Warrior</option>
+                    <option value="Beast">Beast</option>
+                </select>
+                <button type="submit" class="btn btn-gold">Filter Class</button>
+            </form>
+
+            <#if activeFilter??>
+                <div class="container mt-2 mb-4">
+                    <div class="alert text-center" style="background-color: #2d2d2d; border: 1px solid #b8860b; color: #f0e68c;">
+                        <span class="fs-5">👁️ <strong>Filter Active:</strong> Showing results for ${activeFilter}</span>
+                        <br>
+                        <a href="/mvc/characters" class="btn btn-gold btn-sm mt-3 px-4">Clear Filters & View All</a>
+                </div>
+                </div>
+            </#if>
+
         </div>
     </header>
 
@@ -69,21 +96,6 @@
         <p class="text-muted">Levi Duquette | CSC340</p>
     </footer>
 
-    <script>
-        document.getElementById('charSearch').addEventListener('keyup', function() {
-            let filter = this.value.toLowerCase();
-            let items = document.querySelectorAll('.char-item');
-
-            items.forEach(function(item) {
-                let name = item.getAttribute('data-name').toLowerCase();
-                if (name.includes(filter)) {
-                    item.style.display = "block";
-                } else {
-                    item.style.display = "none";
-                }
-            });
-        });
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
